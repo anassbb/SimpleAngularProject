@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -10,5 +11,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink, NgIf],
 })
 export class TopBarComponent {
-  //cart = inject(CartService);
+  cart = inject(CartService); //inject the CartService.
+
+  cartCount = this.cart.cartCount;
 }

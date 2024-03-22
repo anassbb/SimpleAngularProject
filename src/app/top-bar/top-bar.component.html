@@ -1,1 +1,28 @@
-<p>top-bar works!</p>
+<header class="site-header">
+  <div class="site-header-wrapper">
+    <h1>
+      <a [routerLink]="['/']"
+        ><img src="./assets/img/png//logo.png" alt="bethany's Pie Shop Logo"
+      /></a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/shop">Shop</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-icons">
+      <ul>
+        <li class="cart-icon">
+          <a routerLink="/cart"
+            ><img
+              class="cart-img"
+              src="./assets/img/png//cart-icon.png"
+              alt="Shopping cart icon"
+          /></a>
+          <span *ngIf="cartCount()" class="cart-count">{{ cartCount() }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
