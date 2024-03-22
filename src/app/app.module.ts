@@ -10,15 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
-  declarations: [
-    //AppComponent
-    //TopBarComponent
-  
-    CartComponent,
-    CheckoutComponent,
-    ContactComponent,
-    ProductListComponent
-  ],
+  declarations: [],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [
